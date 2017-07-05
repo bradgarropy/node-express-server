@@ -1,7 +1,7 @@
-# Web Server & REST API Using NodeJS & ExpressJS
+# Web Server & REST API Using Node & Express
 
 *Learning about the world of JavaScript can be incredibly daunting.  
-Learning [NodeJS](https://nodejs.org/) is even worse.*
+Learning [Node](https://nodejs.org/) is even worse.*
 
 <!-- TODO: Fill out this section. -->
 
