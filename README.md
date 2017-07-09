@@ -29,18 +29,26 @@ In order to access the index page, navigate to `localhost:3000` in your browser.
 Use your favorite REST client, mine is [Postman](https://www.getpostman.com/), to send requests to the server.
 
 ### Retrieve Weight Entries
+```
 GET /api/weight
+```
 
 ### Add Weight Entry
+```
 POST /api/weight  
 Parameters: { "date": "2017-05-17", "weight": 180 }
+```
 
 ### Update Weight Entry
+```
 PATCH /api/weight/:date  
 Parameters: { "weight": 180 }
+```
 
 ### Remove Weight Entry
+```
 DELETE /api/weight/:date
+```
 
 ## Lessons Learned
 
