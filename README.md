@@ -3,7 +3,7 @@
 *Learning about the world of JavaScript can be incredibly daunting.  
 Learning [Node](https://nodejs.org/) is even worse.*
 
-<!-- TODO: Fill out this section. -->
+This is the second iteration of the [node-only-server](https://github.com/bradgarropy/node-only-server). With this version, I incorporated two additional modules: [express](https://expressjs.com/) and [body-parser](https://github.com/expressjs/body-parser). Still no database and no HTML templating.
 
 ## Features
 
@@ -44,4 +44,8 @@ DELETE /api/weight/:date
 
 ## Lessons Learned
 
-<!-- TODO: Fill out this section. -->
+I found that the main impact by including [Express](https://expressjs.com/) was a much more streamlined process for defining routes. [Express](https://expressjs.com/) makes parsing the request method, url, headers, and body so much easier. It's use of the [path-to-regexp](https://www.npmjs.com/package/path-to-regexp) package is genius for quickly bringing up a REST API.
+
+However, my most awkward route oddly enough is the index page. This is because I'm using plain old template literals to populate an HTML page with dynamic data. [Express](https://expressjs.com/) does not provide HTML templating in its own framework, but rather relies on existing template engines to render views. So the next package I'm going to integrate is an HTML templating tool, like [pug](https://pugjs.org/), to help me out.
+
+> I'm using [this article](https://strongloop.github.io/strongloop.com/strongblog/compare-javascript-templates-jade-mustache-dust/) to help me pick a template engine.
