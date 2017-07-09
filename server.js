@@ -22,7 +22,8 @@ app.use(bp_urlencoded);
 app.get("/", function(request, response) {
     console.log(request.method + " " +  request.originalUrl);
     console.log(request.params);
-    response.send("Done.");
+
+    index.render(request, response);
 });
 
 
