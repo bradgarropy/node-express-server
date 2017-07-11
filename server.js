@@ -21,7 +21,6 @@ app.use(bp_urlencoded);
 
 app.get("/", function(request, response) {
     console.log(request.method + " " +  request.originalUrl);
-    console.log(request.params);
 
     index.render(request, response);
 });
@@ -29,7 +28,6 @@ app.get("/", function(request, response) {
 
 app.get("/api/weight", function(request, response) {
     console.log(request.method + " " +  request.originalUrl);
-    console.log(request.params);
 
     weight.read(request, response);
 });
@@ -37,7 +35,6 @@ app.get("/api/weight", function(request, response) {
 
 app.post("/api/weight", function(request, response) {
     console.log(request.method + " " +  request.originalUrl);
-    console.log(request.params);
 
     weight.add(request, response);
 });
@@ -45,7 +42,6 @@ app.post("/api/weight", function(request, response) {
 
 app.patch("/api/weight/:date", function(request, response) {
     console.log(request.method + " " +  request.originalUrl);
-    console.log(request.params);
 
     weight.update(request, response);
 });
@@ -53,7 +49,6 @@ app.patch("/api/weight/:date", function(request, response) {
 
 app.delete("/api/weight/:date", function(request, response) {
     console.log(request.method + " " +  request.originalUrl);
-    console.log(request.params);
 
     weight.remove(request, response);
 });
