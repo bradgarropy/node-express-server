@@ -12,46 +12,18 @@ const app = express();
 app.set("json spaces", 4);
 
 
-// body parser
+// middleware
 let bp_json = bodyparser.json();
 let bp_urlencoded = bodyparser.urlencoded( {extended: true} );
 app.use(bp_json);
 app.use(bp_urlencoded);
 
 
-app.get("/", function(request, response) {
-    console.log(request.method + " " +  request.originalUrl);
+// index routes
+app.use("/", index);
 
-    index.render(request, response);
-});
-
-
-app.get("/api/weight", function(request, response) {
-    console.log(request.method + " " +  request.originalUrl);
-
-    weight.read(request, response);
-});
-
-
-app.post("/api/weight", function(request, response) {
-    console.log(request.method + " " +  request.originalUrl);
-
-    weight.add(request, response);
-});
-
-
-app.patch("/api/weight/:date", function(request, response) {
-    console.log(request.method + " " +  request.originalUrl);
-
-    weight.update(request, response);
-});
-
-
-app.delete("/api/weight/:date", function(request, response) {
-    console.log(request.method + " " +  request.originalUrl);
-
-    weight.remove(request, response);
-});
+// weight routes
+app.use("/api/weight", weight);
 
 
 // start application

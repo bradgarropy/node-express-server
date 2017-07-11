@@ -1,34 +1,14 @@
-const index = require("../views/index");
-const fs    = require("fs");
+const express = require("express");
+const index   = require("../models/index");
+
+const router = express.Router();
 
 
-function render(request, response) {
+router.get("/", function(request, response) {
+    console.log(request.method + " " +  request.originalUrl);
 
-    // read file
-    fs.readFile("./models/weight.json", function(err, data) {
-
-        // check errors
-        if(err) {
-            console.log(err);
-            throw err;
-        }
-
-        // carry on
-        else {
-
-            // convert to json
-            let weights = JSON.parse(data);
-
-            // render html table
-            let html = index.render(weights);
-
-            // send response
-            response.send(html);
-        }
-    });
-
-}
+    index.render(request, response);
+});
 
 
-// exports
-exports.render = render;
+module.exports = router;
