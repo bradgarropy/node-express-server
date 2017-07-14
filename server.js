@@ -1,5 +1,6 @@
 const bodyparser = require("body-parser");
 const express    = require("express");
+const logger     = require("./routes/logger");
 const weight     = require("./routes/weight");
 const index      = require("./routes/index");
 
@@ -15,6 +16,7 @@ app.set("json spaces", 4);
 // middleware
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded( {extended: true} ));
+app.use(logger.log);
 
 
 // index routes

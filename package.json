@@ -32,6 +32,7 @@
   "homepage": "https://github.com/bradgarropy/node-express-server#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "lodash": "^4.17.4"
   }
 }
