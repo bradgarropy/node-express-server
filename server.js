@@ -13,10 +13,8 @@ app.set("json spaces", 4);
 
 
 // middleware
-let bp_json = bodyparser.json();
-let bp_urlencoded = bodyparser.urlencoded( {extended: true} );
-app.use(bp_json);
-app.use(bp_urlencoded);
+app.use(bodyparser.json());
+app.use(bodyparser.urlencoded( {extended: true} ));
 
 
 // index routes
